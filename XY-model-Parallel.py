@@ -220,5 +220,5 @@ for num in list_folder_config:
         return tt,E,SpcH,M,M_sus
     whole_data = Parallel(n_jobs=num_cores)(delayed(job)(Trangee[i],J) for i in trange(len(Trangee)))
 
-    np.savetxt('output_data/config'+str(num)+'/L'+str(L)+'_N'+str(len(Trangee))+'_thermodynamics.data',whole_data) #output the calculated thermodynamical quantities
+    np.savetxt('config'+str(num)+'/L'+str(L)+'_N'+str(len(Trangee))+'_thermodynamics.data',whole_data) #output the calculated thermodynamical quantities
     print(str(L)+"--- %s seconds ---" % (time.time() - start_time))
